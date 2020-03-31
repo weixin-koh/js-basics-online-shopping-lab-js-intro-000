@@ -28,19 +28,19 @@ function viewCart() {
     return "Your shopping cart is empty.";
   } else {
     var cartString = "In your cart, you have";
-    
+
     for (let i = 0; i < cart.length; cart++) {
 
       if (cart.length > 1) {
         if (cart.length - i > 1) {
           cartString = cartString + ", ";
         }
-        
+
         if (i === cart.length - 1) {
           cartString = cartString + "and ";
         }
       }
-      
+
       cartString = cartString + ` ${cart[i].itemName} at $${cart[i].itemPrice}`;
     }
   }
