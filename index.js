@@ -39,7 +39,7 @@ function viewCart() {
     }
 
     cartString = cartString + ".";
-    console.log(cartString);
+    
     return cartString;
   }
 }
