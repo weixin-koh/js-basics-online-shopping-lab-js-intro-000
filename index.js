@@ -26,9 +26,7 @@ function viewCart() {
 
     for (let i = 0; i < cart.length; cart++) {
       if (cart.length > 1) {
-        if (cart.length - i > 1) {
-          cartString = cartString + ", ";
-        }
+        cartString = cartString + ", ";
 
         if (i === cart.length - 1) {
           cartString = cartString + "and ";
