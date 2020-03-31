@@ -43,6 +43,10 @@ function viewCart() {
 
       cartString = cartString + ` ${cart[i].itemName} at $${cart[i].itemPrice}`;
     }
+
+    cartString = cartString + ".";
+
+    return cartString;
   }
 }
 
