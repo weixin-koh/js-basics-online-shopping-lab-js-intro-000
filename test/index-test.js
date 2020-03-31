@@ -72,7 +72,7 @@ describe("viewCart()", function() {
 
   it("correctly prints a one-item cart", function() {
     addToCart("lemons");
-    expect(viewCart()).toEqual(`In your cart, you have ${getCart()[0]} at $${getCart()[0]}.`);
+    expect(viewCart()).toEqual(`In your cart, you have ${getCart()} at $${getCart()}.`);
   });
 
   it("correctly prints a two-item cart", function() {
