@@ -72,7 +72,7 @@ describe("viewCart()", function() {
 
   it("correctly prints a one-item cart", function() {
     addToCart("lemons");
-    expect(viewCart()).toEqual(`In your cart, you have ${getCart()} at $${getCart()}.`);
+    expect(viewCart()).toEqual(`In your cart, you have ${getCart()[0].itemName} at $${getCart()[0].itemPrice}.`);
   });
 
   it("correctly prints a two-item cart", function() {
@@ -146,7 +146,7 @@ describe("removeFromCart()", function() {
 
 describe("placeOrder()", function() {
   it("doesn't place the order if a credit card number is not provided", function() {
-
+    
     expect(placeOrder()).toEqual("Sorry, we don't have a credit card on file for you.");
   });
 
@@ -156,7 +156,7 @@ describe("placeOrder()", function() {
     const cartTotal = total();
     const cardNumber = Math.floor(Math.random() * 100000000);
 
-
+    
 
     expect(placeOrder(cardNumber)).toEqual(`Your total cost is $${cartTotal}, which will be charged to the card ${cardNumber}.`);
   });
