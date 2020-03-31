@@ -18,7 +18,7 @@ function addToCart(item) {
  // itemInfo['itemName'] = item;
  // itemInfo['itemPrice'] = price;
 
- cart.push({itemName: item, itemPrice: price);
+ cart.push({itemName: item, itemPrice: price});
 
  return `${item} has been added to your cart.`;
 }
