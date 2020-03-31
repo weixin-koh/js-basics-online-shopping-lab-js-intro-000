@@ -32,17 +32,17 @@ describe("addToCart()", function() {
   it("properly structures the cart item as object with a key of `itemName` and the corresponding value { itemName: itemName } format", function() {
     addToCart("daikon");
 
-    let itemName = getCart()[0].itemName;
+    // let itemName = getCart()[0].itemName;
 
-    expect(itemName).toEqual("daikon");
+    expect(getCart()[0].itemName).toEqual("daikon");
   });
 
   it("sets the price (integer between 1 and 100) on the cart object using the key `price`", function() {
     addToCart("eggplant");
 
-    let itemPrice = getCart()[0].itemPrice;
+    // let itemPrice = getCart()[0].itemPrice;
 
-    expect(itemPrice).toBeLessThanOrEqualTo(100)
+    expect(getCart()[0].itemPrice).toBeLessThanOrEqualTo(100)
                      .toBeGreaterThanOrEqualTo(1);
   });
 
