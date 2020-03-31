@@ -24,7 +24,24 @@ function addToCart(item) {
 }
 
 function viewCart() {
-  // write your code here
+  if (cart.length === 0) {
+    return "Your shopping cart is empty.";
+  } else {
+    var cartString = "In your cart, you have";
+    
+    for (let i = 0; i < cart.length; cart++) {
+
+      if (cart.length > 1) {
+        if (i === cart.length - 2) {
+          cartString = cartString + ", and";
+        } else if (cart.length - i > 2) {
+          cartString = cartString + ",";
+        }
+      }
+      
+      
+    }
+  }
 }
 
 function total() {
