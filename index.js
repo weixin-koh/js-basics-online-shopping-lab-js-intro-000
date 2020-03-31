@@ -30,7 +30,6 @@ function viewCart() {
     var cartString = "In your cart, you have";
 
     for (let i = 0; i < cart.length; cart++) {
-
       if (cart.length > 1) {
         if (cart.length - i > 1) {
           cartString = cartString + ", ";
