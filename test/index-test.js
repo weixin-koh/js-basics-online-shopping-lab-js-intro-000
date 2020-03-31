@@ -34,7 +34,7 @@ describe("addToCart()", function() {
 
     let itemName = getCart()[0].itemName;
 
-    expect(getCart()[0]).toEqual("daikon");
+    expect(itemName).toEqual("daikon");
   });
 
   it("sets the price (integer between 1 and 100) on the cart object using the key `price`", function() {
@@ -42,7 +42,7 @@ describe("addToCart()", function() {
 
     let itemPrice = getCart()[0].itemPrice;
 
-    expect(getCart()[0].toBeLessThanOrEqualTo(100)
+    expect(itemPrice).toBeLessThanOrEqualTo(100)
                      .toBeGreaterThanOrEqualTo(1);
   });
 
